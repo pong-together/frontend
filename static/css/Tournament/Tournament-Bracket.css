@@ -234,3 +234,25 @@
 	font-size: 28px;
 	color: white;
 }
+
+.game-start {
+	width: 331px;
+	height: 70px;
+	background-color: #FFA6A6;
+	border-radius: 15px;
+	border-width: 0;
+	font-size: 28px;
+	color: white;
+	font-family: 'jua';
+	margin-top: 15px;
+	box-shadow: 3px 3px 3px black;
+}
+
+.game-start:active {
+	transform: translate(3px, 3px);
+	box-shadow: none;
+}
+
+.game-start:hover {
+	background-color: pink;
+}

@@ -44,4 +44,10 @@ export default class {
 			callback(event);
 		});
 	}
+
+	changeComponent(newComponent) {
+		// this.$target.innerHTML = '';
+		// const component = newComponent(this.$target);
+		newComponent.render();
+	}
 }

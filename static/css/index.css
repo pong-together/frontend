@@ -16,10 +16,10 @@ body {
 }
 
 .login-body-wrapper {
-	width: 900px;
-	height: 446px;
-	background-color: gray;
-	margin: 10% auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .back-wrapper {
@@ -45,13 +45,13 @@ body {
 .body-wrapper {
 	width: 900px;
 	height: 446px;
-	background-color: gray;
+	background-color: #6cd3ff;
 	margin: 0 auto;
 }
 
 .footer-wrapper {
 	width: 900px;
-	height: calc(100% - 150px - 445px);
+	height: calc(100% - 150px - 475px);
 	margin: 0 auto;
 	display: flex;
 }

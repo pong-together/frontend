@@ -1,0 +1,112 @@
+.chip-container {
+	background-color: #D4D4D4;
+	width: 226px;
+	height: 253px;
+	border-radius: 15px;
+	border: 5px solid #A3A3A3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.chip-top {
+	/* background-color: lightblue; */
+	width: 177px;
+	height: 17px;
+	display: flex;
+	justify-content: center;
+}
+
+.chip-middle {
+	background-color: #ED4C5C;
+	width: 177px;
+	height: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.chip-logo {
+	width: 35px;
+	height: 41px;
+	background-image: url("../static/images/ChipLogo.png");
+	background-repeat: round;
+}
+
+.intra-nickname {
+	font-size: 28px;
+	color: white;
+}
+
+.intra-info {
+	margin-left: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.record {
+	font-size: 20px;
+	color: white;
+}
+
+.intra-picture {
+	width: 177px;
+	height: 139px;
+	background-image: url("../static/images/Chip-background.png");
+	background-repeat: round;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.chip-picture {
+	width: 118px;
+	height: 118px;
+	background-color: gray;
+	border-radius: 50%;
+}
+
+.yellow-box1 {
+	width: 10px;
+	height: 12px;
+	background-color: #FDFFA5;
+}
+
+.yellow-box2 {
+	width: 10px;
+	height: 12px;
+	background-color: #FDFFA5;
+	margin-left: 5px;
+}
+
+.yellow-box3 {
+	width: 10px;
+	height: 12px;
+	background-color: #FDFFA5;
+	margin-left: 5px;
+}
+
+.chip-bottom {
+	width: 177px;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* .triangle {
+	width: 0px;
+  	height: 0px;
+  	border-top: 15px solid #AEAEAE;
+  	border-left: 15px solid transparent;
+  	border-right: 15px solid transparent;
+} */
+
+.triangle {
+	width: 25px;
+	height: 17px;
+	background-image: url("../static/images/Polygon\ 3.png");
+	background-repeat: round;
+}

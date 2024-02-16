@@ -56,7 +56,7 @@ export default class extends Component {
 					<div class="firstgame-info1">4강 첫번째 경기</div>
 					<div class="firstgame-info2">4강 두번째 경기</div>
 				</div>
-				<button class="start">경기 시작하기</button>
+				<button class="game-start">경기 시작하기</button>
 			</div>
 		</div>
 		`

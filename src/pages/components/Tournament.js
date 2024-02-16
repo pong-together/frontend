@@ -1,4 +1,5 @@
 import Component from "./Component.js";
+import Bracket from "./Tournament-Bracket.js"
 
 export default class extends Component{
 	setup() {
@@ -32,7 +33,12 @@ export default class extends Component{
 	setEvent() {
 		this.addEvent('click', '.start', ({ target }) => {
 			const prev = this.$state.checkDouble;
-			this.inputNickname(target, prev);
+			const isDuplicate = this.inputNickname(target, prev);
+
+			if (!isDuplicate) {
+				const newComponent = new Bracket(this.$target);
+				this.changeComponent(newComponent);
+			}
 		})
 	}
 
@@ -65,5 +71,6 @@ export default class extends Component{
 		if (isDuplicate) {
 			target.disabled = true;
 		}
+		return isDuplicate;
 	}
 }

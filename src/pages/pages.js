@@ -1,17 +1,15 @@
-import Login from './components/Login.js';
+import Login from './components/login/Login.js';
 import GameSelect from './components/game_select/GameSelect.js';
-
 import Tournament from './components/Tournament.js';
 import Remote from './components/Remote/Remote.js';
-
 import Local from './components/Local.js';
 
-export default (main) => {
-	const login = () => new Login(main);
-	const gameSelect = () => new GameSelect(main);
-	const local = () => new Local(main);
-	const tournament = () => new Tournament(main);
-	const remote = () => new Remote(main);
+export default (main, props) => {
+	const login = () => new Login(main, props);
+	const gameSelect = () => new GameSelect(main, props);
+	const local = () => new Local(main, props);
+	const tournament = () => new Tournament(main, props);
+	const remote = () => new Remote(main, props);
 	const game = () => null;
 
 	return {

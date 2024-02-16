@@ -85,7 +85,7 @@ button:hover {
 .select-modal-box {
 	display: none;
 	position: fixed;
-	transform: translate(-20%, 100%);
+	transform: translate(-20%, 130%);
 	z-index: 5;
 	overflow: auto;
 	background-color: #fdffa5;
@@ -94,6 +94,6 @@ button:hover {
 	color: black;
 	background: rgba(253, 255, 165, 0.8);
 	border-radius: 20px 0px 20px 20px;
-	padding: 0 20px;
+	padding: 10px 20px;
 	overflow-wrap: break-word;
 }
