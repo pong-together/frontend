@@ -1,0 +1,236 @@
+.players {
+	display: flex;
+}
+
+.main-container-bracket {
+	position: relative;
+	margin-top: 30px;
+	background-image: url(../../images/bracket-background.png);
+	background-repeat: round;
+	width: 900px;
+	height: 446px;
+}
+
+#player {
+	display: flex;
+	color: white;
+	width: 151px;
+	height: 54px;
+	border-radius: 15px;
+	background-color: #FFA6A6;
+	font-size: 28px;
+	justify-content: center;
+	align-items: center;
+}
+
+.player2 {
+	margin-left: 20px;
+}
+
+.player3 {
+	margin-left: 100px;
+}
+
+.player4 {
+	margin-left: 20px;
+}
+
+.connector {
+	width: 740px;
+	display: flex;
+}
+
+.game1-rightline {
+	width: 2px;
+	height: 20px;
+	background-color: white;
+	margin-left: 75px;
+}
+
+.game1-vertline1 {
+	width: 85px;
+	height: 2px;
+	background-color: white;
+}
+
+.game1-vertline2 {
+	width: 85px;
+	height: 2px;
+	background-color: white;
+	/* display: none; */
+}
+
+.game1-leftline {
+	width: 2px;
+	height: 20px;
+	background-color: white;
+	/* display: none; */
+}
+
+.game2-rightline {
+	width: 2px;
+	height: 20px;
+	background-color: white;
+	margin-left: 250px;
+}
+
+.game2-vertline1 {
+	width: 88px;
+	height: 2px;
+	background-color: white;
+}
+
+.game2-vertline2 {
+	width: 85px;
+	height: 2px;
+	background-color: white;
+	/* display: none; */
+}
+
+.game2-leftline {
+	width: 2px;
+	height: 20px;
+	background-color: white;
+	/* display: none; */
+}
+
+.winner-line-container {
+	width: 740px;
+	display: flex;
+}
+
+.game1-winner-line {
+	width: 2px;
+	height: 20px;
+	background-color: white;
+	margin-left: 160px;
+}
+
+.game2-winner-line {
+	width: 2px;
+	height: 20px;
+	background-color: white;
+	margin-left: 423px;
+}
+
+.winner-players {
+	width: 740px;
+	display: flex;
+}
+
+.game1-winner {
+	margin-left: 85px;
+}
+
+.game2-winner {
+	margin-left: 270px;
+}
+
+.finalgame-line-container {
+	width: 740px;
+	display: flex;
+}
+
+.finalgame-rightline {
+	width: 2px;
+	height: 20px;
+	background-color: white;
+	margin-left: 160px;
+}
+
+.finalgame-leftline {
+	width: 2px;
+	height: 20px;
+	background-color: white;
+}
+
+.finalgame-vertline1 {
+	width: 215px;
+	height: 2px;
+	background-color: white;
+}
+
+.finalgame-vertline2 {
+	width: 212px;
+	height: 2px;
+	background-color: white;
+}
+
+.finalgame-winner-line {
+	width: 2px;
+	height: 20px;
+	background-color: white;
+	margin-left: 375px;
+}
+
+.tournament-ball {
+	background-image: url(../../images/Group\ 69.png);
+	width: 50px;
+	height: 50px;
+	margin-left: 350px;
+	background-repeat: round;
+}
+
+.tournament-crown {
+	background-image: url(../../images/Group\ 85.png);
+	width: 50px;
+	height: 40px;
+	margin-left: 350px;
+	background-repeat: round;
+}
+
+.start {
+	width: 331px;
+	height: 70px;
+	background-color: #FFA6A6;
+	border-radius: 15px;
+	border-width: 0;
+	font-size: 28px;
+	color: white;
+	font-family: 'jua';
+	margin-top: 20px;
+	box-shadow: 3px 3px 3px black;
+}
+
+.start:active {
+	transform: translate(3px, 3px);
+	box-shadow: none;
+}
+
+.start:hover {
+	background-color: pink;
+}
+
+.info {
+	color: white;
+	font-size: 24px;
+	padding: 20px;
+}
+
+.bracket-container {
+	position: absolute;
+	top: 5px;
+	left: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.gameinfo-container {
+	display: flex;
+}
+
+.firstgame-info1 {
+	margin-top: 15px;
+	margin-right: 120px;
+	font-size: 28px;
+	color: white;
+}
+
+.firstgame-info2 {
+	margin-top: 15px;
+	margin-left: 140px;
+	font-size: 28px;
+	color: white;
+}

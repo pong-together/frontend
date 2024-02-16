@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Jua', sans-serif;
+	background-color: #6cd3ff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.all-container {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	width: 1000px;
+	height: 1030px;
+}
+
+.contain {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-container {
+	background-image: url(../../images/background.png);
+	background-repeat: round;
+	width: 900px;
+	height: 446px;
+}
+
+.info {
+	color: white;
+	font-size: 24px;
+	padding: 20px;
+}
+
+.explaination {
+	color: white;
+	text-decoration: 1px solid black;
+	font-size: 28px;
+	text-shadow:
+		-3px 0px black,
+		0px 3px black,
+		3px 0px black,
+		0px -3px black;
+}
+
+.explaination2 {
+	color: white;
+	text-decoration: 1px solid black;
+	font-size: 28px;
+	text-shadow:
+		-3px 0px black,
+		0px 3px black,
+		3px 0px black,
+		0px -3px black;
+}
+
+.nick-container {
+	text-align: center;
+}
+
+.error-nickname {
+	color: red;
+	font-size: 24px;
+}
+
+.start {
+	width: 356px;
+	height: 84px;
+	background-color: #ffa6a6;
+	border-radius: 15px;
+	border-width: 0;
+	font-size: 28px;
+	color: white;
+	font-family: 'jua';
+	margin-top: 15px;
+	box-shadow: 3px 3px 3px black;
+}
+
+.start:active {
+	transform: translate(3px, 3px);
+	box-shadow: none;
+}
+
+.start:hover {
+	background-color: pink;
+}
+
+#nickname {
+	width: 294px;
+	height: 70px;
+	background-color: #fdffa5;
+	border-radius: 15px;
+	border-width: 0;
+	margin: 5px;
+	font-size: 28px;
+	font-family: 'jua';
+	text-align: center;
+}
+
+#nickname::placeholder {
+	color: lightgray;
+}

@@ -1,0 +1,27 @@
+.local-nick-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+.local-start {
+	width: 356px;
+	height: 84px;
+	background-color: #FFA6A6;
+	border-radius: 15px;
+	border-width: 0;
+	font-size: 28px;
+	color: white;
+	font-family: 'jua';
+	margin-top: 15px;
+	box-shadow: 3px 3px 3px black;
+}
+
+.local-start:active {
+	transform: translate(3px, 3px);
+	box-shadow: none;
+}
+
+.local-start:hover {
+	background-color: pink;
+}
