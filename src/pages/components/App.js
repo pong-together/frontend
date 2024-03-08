@@ -183,6 +183,13 @@ export default class extends Component {
 			this.routerModule();
 		});
 
+		if (!localStorage.getItem('intraId'))
+			localStorage.setItem('intraId', 'Anonymous');
+		if (localStorage.getItem('winCount') === null)
+			localStorage.setItem('winCount', 0);
+		if (localStorage.getItem('loseCount') === null)
+			localStorage.setItem('loseCount', 0);
+		
 		this.calcRate();
 		if (localStorage.getItem('accessToken')) {
 			this.connectSocket();
