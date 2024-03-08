@@ -47,9 +47,15 @@ export default class extends Component {
 	}
 
 	// connectGameSocket() {
-	// 	const chatSocket = new WebSocket(
-	// 		`${SOCLK}`
+	// 	const gameSocket = new WebSocket(
+	// 		`${SOCLKET_URL}/ws/chats/?token=${localStorage.getItem('accessToken')} type=${localStorage.getItem('gameMode')} type_id=${localStorage.getItem('tournament-id')}`,
 	// 	)
+		
+	// 	gameSocket.onopen = () => {
+	// 		this.addEvent('keypress', '.game-display', (e) => {
+	// 			if (e.key === 'w')
+	// 		})
+	// 	}
 	// }
 
 	mounted() {

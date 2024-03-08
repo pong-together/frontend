@@ -105,7 +105,7 @@ export default class extends Component {
 
 	connectSocket() {
 		const chatSocket = new WebSocket(
-			`${SOCKET_URL}/ws/chats/?token=${localStorage.getItem('accessToken')}`,
+			`${SOCKET_URL}/ws/chats/?token=${localStorage.getItem('accessToken')} type=${localStorage.getItem('gameMode')} type_id=${localStorage.getItem('tournament-id')}`,
 		);
 
 		chatSocket.onopen = () => {
