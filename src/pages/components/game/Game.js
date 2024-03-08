@@ -1,5 +1,6 @@
 import Component from '../../../core/Component.js';
 import http from '../../../core/http.js';
+import store from '../../../store/index.js';
 import GameReady from './GameReady.js';
 
 const SOCKET_URL = import.meta.env.VITE_SOCKET_URL;
@@ -117,6 +118,10 @@ export default class extends Component {
 			}
 			else if (data.type && data.type === 'get_game_info') {
 				//전역으로 공좌표 관리하기?
+				store.dispatch('ball_xChange', data.ball_x);
+				store.dispatch('ball_yChange', data.ball_y);
+				store.dispatch('player1_yChange', data.player1_y);
+				store.dispatch('player2_yChange', data.player2_y);
 			}
 		}
 	}
