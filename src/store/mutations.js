@@ -47,5 +47,13 @@ export default {
 	changeTournamentId(state, payload) {
 		state.torunamentId = payload;
 		return state;
+	},
+	changeBall_x(state, payload) {
+		state.ball_x = payload;
+		return state;
+	},
+	changeBall_y(state, payload) {
+		state.ball_y = payload;
+		return state;
 	}
 };
