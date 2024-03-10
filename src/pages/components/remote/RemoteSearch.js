@@ -19,7 +19,7 @@ export default class extends Component {
 		};
 		this.$state = this.$props;
 		this.setState(this.intra);
-		this.remoteSocket = null;
+		//remoteSocket = null;
 	}
 
 	template() {
@@ -54,7 +54,7 @@ export default class extends Component {
 		function stopCounter() {
 			clearInterval(count);
 			updateCounter();
-			this.remoteSocket.close();
+			remoteSocket.close();
 			window.location.pathname = '/select';
 		}
 		this.stopCounter = stopCounter;
@@ -65,7 +65,7 @@ export default class extends Component {
 			new RemoteReady(
 				document.querySelector('.mainbox'),
 				this.$state,
-				this.remoteSocket,
+				remoteSocket,
 			);
 		};
 		this.nextLevel = nextLevel;
@@ -86,17 +86,17 @@ export default class extends Component {
 	}
 
 	connectSocket() {
-		this.remoteSocket = new WebSocket(
-			`${SOCKET_URL}/ws/remote/?token=${localStorage.getItem('accessToken')}&mode=${localStorage.getItem('mode')}`,
+		var remoteSocket = new WebSocket(
+			`${SOCKET_URL}/ws/remote/?token=${localStorage.getItem('accessToken')}&game_mode=${localStorage.getItem('mode')}`,
 		);
 
-		this.remoteSocket.onopen = () => {
+		remoteSocket.onopen = () => {
 			if (remoteSocket.readyState === WebSocket.OPEN) {
 				console.log('remoteSocket connected');
 			}
 		};
 
-		this.remoteSocket.onmessage = (e) => {
+		remoteSocket.onmessage = (e) => {
 			console.log('received msg from server');
 			const data = JSON.parse(e.data);
 			this.$state.type = data.type;
@@ -108,14 +108,14 @@ export default class extends Component {
 			this.nextLevel();
 		};
 
-		this.remoteSocket.onerror = (e) => {
+		remoteSocket.onerror = (e) => {
 			console.log('remoteSocker error');
 			console.log(e);
 			console.log(e.status);
 			remoteSocket.close();
 		};
 
-		this.remoteSocket.onclose = () => {
+		remoteSocket.onclose = () => {
 			console.log('remoteSocker closed');
 			localStorage.removeItem('mode');
 		};
