@@ -8,6 +8,6 @@ export default {
 	loseCount: 0,
 	// gameOption
 	gameMode: 'local', // tournament, remote
-	gameLevel: 'basic', // extreme
+	gameLevel: 'default', // extreme
 	tournamentId: 0,
 };

@@ -20,7 +20,7 @@ export default class extends Component {
 		this.$state = {
 			progress: 'main',
 			mode: 'local',
-			level: 'basic',
+			level: 'default',
 			localModal: 'none',
 			tournamentModal: 'none',
 			remoteModal: 'none',
@@ -155,7 +155,7 @@ export default class extends Component {
 			</div>
 			<div>
 				<label class="game-select-difficult">
-					<input type="checkbox" class="level" value="basic"> ${language.gameSelect[store.state.language].levelOne}
+					<input type="checkbox" class="level" value="default"> ${language.gameSelect[store.state.language].levelOne}
 				</label>
 				<label class="game-select-difficult">
 					<input type="checkbox" class="level" value="extreme"> ${language.gameSelect[store.state.language].levelTwo}
