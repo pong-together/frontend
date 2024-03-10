@@ -93,6 +93,8 @@ export default class extends Component {
 
 		this.addEvent('click', '#game-mode-button', (e) => {
 			e.stopPropagation();
+			localStorage.setItem('gameMode', this.$state.mode);
+			localStorage.setItem('gameMode', this.$state.level);
 			if (this.$state.mode === 'local') {
 				window.location.pathname = '/local';
 			} else if (this.$state.mode === 'tournament') {
