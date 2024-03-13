@@ -126,6 +126,8 @@ export default class extends Component {
 				this.exclamationMark();
 				await this.sleep();
 				this.remoteReady();
+			} else if (data.type && data.type === 'disconnect') {
+				console.log;
 			}
 		};
 
