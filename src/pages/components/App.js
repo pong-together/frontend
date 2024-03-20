@@ -111,7 +111,7 @@ export default class extends Component {
 		);
 
 		chatSocket.onopen = () => {
-			console.log("chat connect");
+			// console.log("chat connect");
 			this.addEvent('click', '.message-btn', (e) => {
 				e.preventDefault();
 				var message = this.$target.querySelector('#m').value;
@@ -132,7 +132,7 @@ export default class extends Component {
 		};
 
 		chatSocket.onclose = function (event) {
-			console.log('WebSocket closed.');
+			// console.log('WebSocket closed.');
 			if(event.code === 1000){
 				console.log('Try multiple connections');
 				displayConnectionFailedModal(

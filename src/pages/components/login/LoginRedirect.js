@@ -44,7 +44,7 @@ export default class LoginRedirect extends Component {
 					return;
 				}
 
-				console.log(code);
+				// console.log(code);
 
 				const data = await http.post(
 					`${BASE_URL}/api/auth/login/`,
@@ -58,7 +58,7 @@ export default class LoginRedirect extends Component {
 					navigate("/login");
 				}
 			} catch (error) {
-				console.log('error: ', error);
+				// console.log('error: ', error);
 			}
 		}
 	}
