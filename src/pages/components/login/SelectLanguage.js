@@ -2,7 +2,6 @@ import Component from '../../../core/Component.js';
 import language from '../../../utils/language.js';
 import store from '../../../store/index.js';
 import http from '../../../core/http.js';
-import { displayConnectionFailedModal } from '../../../utils/modal.js';
 
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
@@ -31,12 +30,6 @@ export default class extends Component {
 				});
 				// console.log(data);
 				if (data) {
-					// if (data.chat_connection === true) {
-					// 	// 중복 접근을 제한하는 모달 띄워줌
-					// 	displayConnectionFailedModal('다른 사용자가 이미 접속중입니다.');
-					// 	localStorage.clear();
-					// 	return;
-					// }
 					localStorage.setItem('intraId', data?.intra_id);
 					store.dispatch('changeIntraId', data?.intra_id);
 					localStorage.setItem('winCount', data?.win_count);
