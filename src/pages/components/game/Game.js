@@ -11,7 +11,7 @@ export default class Game extends Component {
 
 	static getInstance($container) {
 		if (!Game.instance) {
-				Game.instance = new Game($container);
+			Game.instance = new Game($container);
 		}
 		return Game.instance;
 	}
@@ -97,7 +97,6 @@ export default class Game extends Component {
 
 	setState(newState) {
 		this.$state = { ...this.$state, ...newState };
-		// this.render();
 	}
 
 	connectGameSocket() {
@@ -119,12 +118,9 @@ export default class Game extends Component {
 
 			this.event1 = (e) => {
 				if (window.localStorage.getItem('gameMode') === 'remote') {
-					if (e.key === 'ㅈ')
-						keyStates['w'] = true;
-					else if (e.key === 'ㄴ')
-						keyStates['s'] = true;
-					else if (e.key === 'ㅔ')
-						keyStates['p'] = true;
+					if (e.key === 'ㅈ') keyStates['w'] = true;
+					else if (e.key === 'ㄴ') keyStates['s'] = true;
+					else if (e.key === 'ㅔ') keyStates['p'] = true;
 					keyStates[e.key] = true;
 					updateBarPositionRemote();
 				} else {
@@ -155,8 +151,7 @@ export default class Game extends Component {
 						sender_player: `${window.localStorage.getItem('intraId')}`,
 						button: 'up',
 					});
-				}
-				else if (keyStates['s']) {
+				} else if (keyStates['s']) {
 					messages.push({
 						type: 'push_button',
 						sender_player: `${window.localStorage.getItem('intraId')}`,
@@ -208,7 +203,7 @@ export default class Game extends Component {
 			setTimeout(() => {
 				if (gameSocket.readyState === WebSocket.OPEN) {
 					let start = {
-						type: "start_game",
+						type: 'start_game',
 					};
 					gameSocket.send(JSON.stringify(start));
 				}
@@ -240,14 +235,12 @@ export default class Game extends Component {
 					this.setState({ player2_image: imageUrl2 });
 				}
 				this.render();
-			}
-			else if (data.type && data.type === 'send_reconnection') {
+			} else if (data.type && data.type === 'send_reconnection') {
 				gameSocket.close();
 				document.removeEventListener('keydown', this.event1);
 				document.removeEventListener('keyup', this.event2);
 				navigate('/select');
-			}
-			else if (data.type && data.type === 'end') {
+			} else if (data.type && data.type === 'end') {
 				if (data.is_normal === false) {
 					const element3 = document.querySelector('.game-display');
 					element3.innerHTML = this.templateEnd();
@@ -291,8 +284,7 @@ export default class Game extends Component {
 		this.addEvent('click', '.game-end-button', ({ target }) => {
 			if (window.localStorage.getItem('gameMode') === 'tournament') {
 				navigate('/tournamentBracket');
-			}
-			else {
+			} else {
 				// window.location.pathname = '/select';
 				if (window.localStorage.getItem('gameMode') === 'local') {
 					window.localStorage.removeItem('local-id');
@@ -432,11 +424,10 @@ export default class Game extends Component {
 
 	mounted() {
 		if (!this.$state.game_id) {
-				document.removeEventListener('keydown', this.event1);
-				document.removeEventListener('keyup', this.event2);
-				navigate('/select');
-		}
-		else {
+			document.removeEventListener('keydown', this.event1);
+			document.removeEventListener('keyup', this.event2);
+			navigate('/select');
+		} else {
 			var player1 = document.querySelector('.player1-image');
 			var player2 = document.querySelector('.player2-image');
 			if (
