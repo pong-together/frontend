@@ -38,16 +38,6 @@ export default class GameSelect extends Component {
 			tournamentModal: 'none',
 			remoteModal: 'none',
 		};
-		if (
-			!localStorage.getItem('intraId') ||
-			localStorage.getItem('intraId') === 'undefined' ||
-			!localStorage.getItem('winCount') ||
-			localStorage.getItem('winCount') === 'undefined' ||
-			!localStorage.getItem('loseCount') ||
-			localStorage.getItem('loseCount') === 'undefined' ||
-			!localStorage.getItem('intraImg') ||
-			localStorage.getItem('intraImg') === 'undefined'
-		) {
 			console.log("전적 http 요청");
 			const data = await http.get(`${BASE_URL}/api/userinfo/`, {
 				Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
@@ -61,7 +51,6 @@ export default class GameSelect extends Component {
 				data?.image || '/static/images/user.png',
 			);
 			console.log("전적 요청 완료");
-		}
 	}
 
 	setEvent() {
