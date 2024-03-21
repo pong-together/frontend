@@ -48,6 +48,7 @@ export default class GameSelect extends Component {
 			!localStorage.getItem('intraImg') ||
 			localStorage.getItem('intraImg') === 'undefined'
 		) {
+			console.log("전적 http 요청");
 			const data = await http.get(`${BASE_URL}/api/userinfo/`, {
 				Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
 				'Content-Type': 'application/json',
@@ -59,6 +60,7 @@ export default class GameSelect extends Component {
 				'intraImg',
 				data?.image || '/static/images/user.png',
 			);
+			console.log("전적 요청 완료");
 		}
 	}
 
